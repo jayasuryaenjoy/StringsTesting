@@ -33,7 +33,7 @@ public class Main {
                          "\n" +
                          "  Team Zuno (Formally known as Edelweiss GI Co. Ltd)\n";
             System.out.println(str);
-            System.out.println(message);
+            System.out.println("message:"+message);
 
             String dateTimeString = "2023-07-17 00:00:00.0";
 
