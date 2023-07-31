@@ -10,6 +10,49 @@ import java.util.Map;
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
+        String status = "n";
+        String ZZGRACE_CD = "N";
+        String ZZRENEW_CD = "y";
+        String ZZTYPEBUS_CD = "RENEWAL";
+        System.out.println("RENEWAL_FG status from abdapolicy:" + status);
+        System.out.println("ZZGRACE_CD status from abdapolicy:" + ZZGRACE_CD);
+        System.out.println("ZZRENEW_CD status from abdapolicy:" + ZZRENEW_CD);
+        System.out.println("ZZTYPEBUS_CD status from abdapolicy:" + ZZTYPEBUS_CD);
+        Boolean b = false;
+        Boolean c = false;
+        Boolean d = false;
+        Boolean e = false;
+        if (status != null) {
+            if (status.equalsIgnoreCase("Y")) {
+                System.out.println("enter the status block:"+status);
+                b = true;
+            }
+        }
+        if (ZZTYPEBUS_CD != null) {
+            if (ZZTYPEBUS_CD.equalsIgnoreCase("RENEWAL")) {
+                System.out.println("enter the ZZTYPEBUS_CD block:"+ZZTYPEBUS_CD);
+                c = true;
+            }
+        }
+        if (ZZGRACE_CD != null) {
+            if (ZZGRACE_CD.equalsIgnoreCase("Y")) {
+                System.out.println("enter the ZZGRACE_CD block:"+ZZGRACE_CD);
+                d = true;
+            }
+        }
+        if (ZZRENEW_CD != null) {
+            if (ZZRENEW_CD.equalsIgnoreCase("Y")) {
+                System.out.println("enter the ZZRENEW_CD block:"+ZZRENEW_CD);
+                e = true;
+            }
+        }
+        if (b == true && c == true && d == true && e == true) {
+            System.out.println("IN side the if condation i.e not RENEWAL_FG,ZZGRACE_CD,ZZRENEW_CD,ZZRENEW_CD ");
+
+        }
+
+
+
         // Press Alt+Enter with your caret at the highlighted text to see how
         // IntelliJ IDEA suggests fixing it.
         System.out.printf("Hello and welcome!");
@@ -88,21 +131,14 @@ public class Main {
 
             // Print the dataMap to see the contents (optional)
             System.out.println(dataMap);
-            Object arr_cd123=null;
+            Object arr_cd123 = null;
             if (dataMap.containsKey("ET_SBADR")) {
                 Map<String, Object> etSbadr = (Map<String, Object>) dataMap.get("ET_SBADR");
-                System.out.println("COUNTRY: " + etSbadr.get("COUNTRY"));
-                System.out.println("PM_ID: " + etSbadr.get("PM_ID"));
-                System.out.println("SUBJECT_ID: " + etSbadr.get("SUBJECT_ID"));
                 arr_cd123 = etSbadr.get("ADR_CD");
-                arr_cd123=arr_cd123.toString();
-                // Print other fields as needed
             } else {
                 System.out.println("ET_SBADR not found.");
             }
-            System.out.println("arr_cd:" + arr_cd123.toString());
-            String arr_cd=arr_cd123.toString();
-            System.out.println("in string formate :"+arr_cd);
+            System.out.println(" in string formate arr_cd:" + arr_cd123.toString());
 
 
         }
