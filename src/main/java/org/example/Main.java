@@ -10,8 +10,8 @@ import java.util.Map;
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        String status = "n";
-        String ZZGRACE_CD = "N";
+        String status = "y";
+        String ZZGRACE_CD = "y";
         String ZZRENEW_CD = "y";
         String ZZTYPEBUS_CD = "RENEWAL";
         System.out.println("RENEWAL_FG status from abdapolicy:" + status);
@@ -46,7 +46,7 @@ public class Main {
                 e = true;
             }
         }
-        if (b == true && c == true && d == true && e == true) {
+        if (b && c  && d  && e) {
             System.out.println("IN side the if condation i.e not RENEWAL_FG,ZZGRACE_CD,ZZRENEW_CD,ZZRENEW_CD ");
 
         }
