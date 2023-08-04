@@ -26,33 +26,32 @@ public class Main {
         Boolean e = false;
         if (status != null) {
             if (status.equalsIgnoreCase("Y")) {
-                System.out.println("enter the status block:"+status);
+                System.out.println("enter the status block:" + status);
                 b = true;
             }
         }
         if (ZZTYPEBUS_CD != null) {
             if (ZZTYPEBUS_CD.equalsIgnoreCase("RENEWAL")) {
-                System.out.println("enter the ZZTYPEBUS_CD block:"+ZZTYPEBUS_CD);
+                System.out.println("enter the ZZTYPEBUS_CD block:" + ZZTYPEBUS_CD);
                 c = true;
             }
         }
         if (ZZGRACE_CD != null) {
             if (ZZGRACE_CD.equalsIgnoreCase("Y")) {
-                System.out.println("enter the ZZGRACE_CD block:"+ZZGRACE_CD);
+                System.out.println("enter the ZZGRACE_CD block:" + ZZGRACE_CD);
                 d = true;
             }
         }
         if (ZZRENEW_CD != null) {
             if (ZZRENEW_CD.equalsIgnoreCase("Y")) {
-                System.out.println("enter the ZZRENEW_CD block:"+ZZRENEW_CD);
+                System.out.println("enter the ZZRENEW_CD block:" + ZZRENEW_CD);
                 e = true;
             }
         }
-        if (b && c  && d  && e) {
+        if (b && c && d && e) {
             System.out.println("IN side the if condation i.e not RENEWAL_FG,ZZGRACE_CD,ZZRENEW_CD,ZZRENEW_CD ");
 
         }
-
 
 
         // Press Alt+Enter with your caret at the highlighted text to see how
@@ -136,8 +135,8 @@ public class Main {
             Object arr_cd123 = null;
             if (dataMap.containsKey("ET_SBADR")) {
                 Map<String, Object> etSbadr = (Map<String, Object>) dataMap.get("ET_SBADR");
-                if(!etSbadr.isEmpty())
-                System.out.println("ET_SBADR if condition :");
+                if (!etSbadr.isEmpty())
+                    System.out.println("ET_SBADR if condition :");
                 arr_cd123 = etSbadr.get("ADR_CD");
             } else {
                 System.out.println("ET_SBADR not found.");
