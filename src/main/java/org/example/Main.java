@@ -6,10 +6,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
+
         String status = "y";
         String ZZGRACE_CD = "y";
         String ZZRENEW_CD = "y";
@@ -134,6 +136,8 @@ public class Main {
             Object arr_cd123 = null;
             if (dataMap.containsKey("ET_SBADR")) {
                 Map<String, Object> etSbadr = (Map<String, Object>) dataMap.get("ET_SBADR");
+                if(!etSbadr.isEmpty())
+                System.out.println("ET_SBADR if condition :");
                 arr_cd123 = etSbadr.get("ADR_CD");
             } else {
                 System.out.println("ET_SBADR not found.");
